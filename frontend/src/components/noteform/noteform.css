@@ -1,0 +1,31 @@
+.form {
+  @apply w-[40%] h-[60%] bg-white rounded-lg mx-[30%] my-[10%] px-6 py-4;
+}
+
+.top {
+  @apply flex items-center justify-between text-center;
+}
+
+.cn {
+  @apply text-2xl font-semibold tracking-wider;
+}
+
+.close {
+  @apply cursor-pointer text-2xl font-semibold hover:text-red-500 transition-all duration-300;
+}
+
+.formm {
+  @apply mt-10;
+}
+
+.tit {
+  @apply tracking-wider my-4 text-lg;
+}
+
+.fin {
+  @apply text-xl p-2 border-solid border-[1px] border-black mb-8 w-full shadow-md resize-none;
+}
+
+.save {
+  @apply text-lg tracking-wide font-extrabold px-4 py-2 bg-gradient-to-r from-blue-900 to-cyan-900 text-white shadow-lg hover:from-cyan-500 hover:to-cyan-500 transition-all duration-300 cursor-pointer;
+}

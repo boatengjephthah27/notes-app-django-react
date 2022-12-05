@@ -1,5 +1,5 @@
 .form {
-  @apply mx-2 md:w-[60%] xl:w-[50%] bg-white rounded-lg px-6 py-4;
+  @apply mx-2 md:w-[60%] xl:w-[50%] w-[90%] sm:w-[70%] bg-white rounded-lg px-6 py-4;
 }
 
 .top {
@@ -7,7 +7,7 @@
 }
 
 .cn {
-  @apply md:text-2xl font-semibold tracking-wider;
+  @apply md:text-2xl font-semibold tracking-wider text-blue-900;
 }
 
 .close {
@@ -19,11 +19,11 @@
 }
 
 .tit {
-  @apply tracking-wider my-4 text-lg;
+  @apply tracking-wider my-4 md:text-lg text-blue-900;
 }
 
 .fin {
-  @apply text-xl p-2 border-solid border-[1px] border-black mb-8 w-full shadow-md resize-none;
+  @apply lg:text-lg p-2 border-solid border-[1px] border-black mb-8 w-full shadow-md resize-none;
 }
 
 .save {

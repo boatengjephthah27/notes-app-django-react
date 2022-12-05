@@ -6,7 +6,7 @@ const Posts = (props) => {
   return (
     <div className='post'>
       {props.data_.length > 0 ? (
-        <div>
+        <div className='ccon'>
           <div className='notcon'>
             {props.data_.map((note) => {
               const { title, date_created, id } = note;

@@ -1,15 +1,19 @@
 .post {
-  @apply mt-10 mx-[3%] lg:mx-[10%] items-center flex text-white tracking-widest;
+  @apply h-[100vh] items-center flex justify-center text-white tracking-widest overflow-y-scroll;
 }
 
 .notcon {
-  @apply w-full rounded-lg bg-white flex flex-col;
+  @apply w-full h-[80%] rounded-lg bg-white flex flex-col overflow-y-scroll;
 }
 
 .nc {
-  @apply py-2 border-b-2 border-solid;
+  @apply py-2 border-b-2 border-solid w-full;
 }
 
 .no-p {
   @apply w-full my-[30%] text-center flex items-center justify-center text-white text-2xl;
+}
+
+.ccon {
+  @apply w-full mt-10 mx-[3%] lg:mx-[10%] h-[90%];
 }

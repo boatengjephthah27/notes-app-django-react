@@ -5,6 +5,17 @@ import "./navbar.css";
 
 const Navbar = (props) => {
   const [show, setshow] = useState(false);
+  const [title, settitle] = useState("");
+  const [content, setcontent] = useState("");
+
+  const createNote = (event) => {
+    event.preventDefault();
+    console.log(title);
+    console.log(content);
+    setcontent("");
+    settitle("");
+    setshow(false);
+  };
 
   return (
     <div className='navbar'>
@@ -30,7 +41,15 @@ const Navbar = (props) => {
                   Title
                 </label>
                 <br />
-                <input type='text' name='title' id='title' className='fin' />
+                <input
+                  type='text'
+                  name='title'
+                  id='title'
+                  className='fin'
+                  value={title}
+                  onChange={(e) => settitle(e.target.value)}
+                  placeholder='Title...'
+                />
               </div>
 
               <div className='fg'>
@@ -38,11 +57,24 @@ const Navbar = (props) => {
                   Note
                 </label>
                 <br />
-                <textarea name='text' id='text' className='fin' rows='5' />
+                <textarea
+                  name='text'
+                  id='text'
+                  className='fin'
+                  rows='5'
+                  value={content}
+                  onChange={(e) => setcontent(e.target.value)}
+                  placeholder='Type your note here...'
+                />
               </div>
 
               <div className='fg'>
-                <input type='submit' value='SAVE' className='save' />
+                <input
+                  type='submit'
+                  value='SAVE'
+                  className='save'
+                  onClick={createNote}
+                />
               </div>
             </form>
           </div>

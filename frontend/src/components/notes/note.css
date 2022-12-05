@@ -1,0 +1,16 @@
+.notebg {
+  @apply mx-4 w-full cursor-pointer hover:shadow-2xl text-blue-900;
+}
+
+.ntitle {
+  @apply text-lg font-bold cursor-pointer tracking-normal;
+}
+
+/* .sh-con {
+  @apply w-full h-full top-0 left-0 fixed items-center flex justify-center;
+  background-color: rgba(0, 0, 0, 0.451);
+} */
+
+.date {
+  @apply text-sm;
+}

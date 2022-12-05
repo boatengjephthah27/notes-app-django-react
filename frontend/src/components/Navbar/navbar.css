@@ -3,7 +3,7 @@
 }
 
 .form {
-  @apply w-[40%] h-[60%] bg-white rounded-lg mx-[30%] my-[10%] px-6 py-4;
+  @apply mx-2 md:w-[60%] xl:w-[50%] bg-white rounded-lg px-6 py-4;
 }
 
 .top {
@@ -11,7 +11,7 @@
 }
 
 .cn {
-  @apply text-2xl font-semibold tracking-wider;
+  @apply md:text-2xl font-semibold tracking-wider;
 }
 
 .close {
@@ -35,7 +35,7 @@
 }
 
 .nf {
-  @apply w-full h-full top-0 left-0 fixed;
+  @apply w-full h-full top-0 left-0 fixed items-center flex justify-center;
   background-color: rgba(0, 0, 0, 0.451);
 }
 

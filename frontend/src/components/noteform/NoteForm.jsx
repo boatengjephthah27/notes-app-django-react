@@ -1,18 +1,21 @@
 import React from "react";
 import "./noteform.css";
 
-const NoteForm = () => {
+const NoteForm = (props) => {
+
   return (
     <div className='form'>
       <div className='top'>
         <h1 className='cn'>Create New Note</h1>
-        <p className='close'>X</p>
+        <p className='close' onClick={props.setvisible(false)}>
+          X
+        </p>
       </div>
       <form action='' className='formm'>
         <div className='fg'>
           <label htmlFor='title' className='tit'>
             Title
-          </label>{" "}
+          </label>
           <br />
           <input type='text' name='title' id='title' className='fin' />
         </div>

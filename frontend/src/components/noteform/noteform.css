@@ -29,3 +29,5 @@
 .save {
   @apply text-lg tracking-wide font-extrabold px-4 py-2 bg-gradient-to-r from-blue-900 to-cyan-900 text-white shadow-lg hover:from-cyan-500 hover:to-cyan-500 transition-all duration-300 cursor-pointer;
 }
+
+

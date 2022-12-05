@@ -1,5 +1,5 @@
 .form {
-  @apply w-[40%] h-[60%] bg-white rounded-lg mx-[30%] my-[10%] px-6 py-4;
+  @apply mx-2 md:w-[60%] xl:w-[50%] bg-white rounded-lg px-6 py-4;
 }
 
 .top {
@@ -7,7 +7,7 @@
 }
 
 .cn {
-  @apply text-2xl font-semibold tracking-wider;
+  @apply md:text-2xl font-semibold tracking-wider;
 }
 
 .close {
@@ -30,4 +30,11 @@
   @apply text-lg tracking-wide font-extrabold px-4 py-2 bg-gradient-to-r from-blue-900 to-cyan-900 text-white shadow-lg hover:from-cyan-500 hover:to-cyan-500 transition-all duration-300 cursor-pointer;
 }
 
+.nf {
+  @apply w-full h-full top-0 left-0 fixed items-center flex justify-center;
+  background-color: rgba(0, 0, 0, 0.451);
+}
 
+.hide {
+  @apply hidden;
+}

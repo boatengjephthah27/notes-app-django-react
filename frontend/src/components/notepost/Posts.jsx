@@ -1,33 +1,32 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Note from "../notes/Note";
 import "./post.css";
 
-const getapi = "http://127.0.0.1:8000";
-
-const Posts = () => {
-  const getAllPost = async () => {
-    const response = await fetch(`${getapi}/post/`);
-
-    const data = await response.json();
-
-    if (response.ok) {
-      console.log(data);
-    } else {
-      console.log("Failed");
-    }
-  };
-
-  useEffect(() => {
-    getAllPost();
-  }, []);
-
+const Posts = (props) => {
   return (
     <div className='post'>
-      {/* <h1 className='post'>No Posts!</h1> */}
-      {/* {data.map((note) => {})} */}
-      <div className='notcon'>
-        <Note />
-      </div>
+      {props.data_.length > 0 ? (
+        <div>
+          <div className='notcon'>
+            {props.data_.map((note) => {
+              const { title, date_created, id } = note;
+              return (
+                <div className='nc'>
+                  <Note
+                    key={id}
+                    nid={id}
+                    ntitle={title}
+                    ndate={date_created}
+                    delitem={() => props.delitem(id)}
+                  />
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      ) : (
+        <div className='no-p'>No Posts Here!</div>
+      )}
     </div>
   );
 };

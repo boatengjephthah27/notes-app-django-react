@@ -1,0 +1,3 @@
+.container {
+  @apply overflow-auto h-[88%];
+}

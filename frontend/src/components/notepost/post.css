@@ -1,7 +1,15 @@
 .post {
-  @apply mt-10 mx-[10%] items-center flex text-white tracking-widest;
+  @apply mt-10 mx-[3%] lg:mx-[10%] items-center flex text-white tracking-widest;
 }
 
 .notcon {
-  @apply w-full rounded-lg bg-white;
+  @apply w-full rounded-lg bg-white flex flex-col;
+}
+
+.nc {
+  @apply py-2 border-b-2 border-solid;
+}
+
+.no-p {
+  @apply w-full my-[30%] text-center flex items-center justify-center text-white text-2xl;
 }

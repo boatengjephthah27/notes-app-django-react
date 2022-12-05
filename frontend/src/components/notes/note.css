@@ -1,5 +1,5 @@
 .notebg {
-  @apply mx-4 w-full cursor-pointer hover:shadow-2xl text-blue-900;
+  @apply mx-4 py-2 px-3 w-full cursor-pointer hover:scale-[1.02] hover:shadow-md transition-all duration-300 text-blue-900;
 }
 
 .ntitle {
@@ -12,5 +12,21 @@
 } */
 
 .date {
-  @apply text-sm;
+  @apply text-sm font-thin;
+}
+
+.icon {
+  @apply mr-2 font-light;
+}
+
+.del {
+  @apply text-red-600 text-lg float-right;
+}
+
+.delbtn {
+  @apply cursor-pointer;
+}
+
+.editbtn {
+  @apply text-blue-700 cursor-pointer mr-8 ml-4;
 }

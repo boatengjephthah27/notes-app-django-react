@@ -1,3 +1,4 @@
+import axios from "axios";
 import React, { useState } from "react";
 import AddNote from "../addnote/AddNote";
 import Logo from "../logo/Logo";
@@ -10,35 +11,27 @@ const Navbar = (props) => {
   const [show, setshow] = useState(false);
   const [title, settitle] = useState("");
   const [content, setcontent] = useState("");
+  const [data, setdata] = useState([]);
 
   const createNote = async (event) => {
     event.preventDefault();
 
-    const new_request = new Request(`${getapi}/post/`, {
-      body: JSON.stringify({
-        title,
-        content,
-      }),
-      headers: {
-        "Content-Type": "Application/Json",
-      },
-      method: "POST",
-    });
+    props.showall();
 
-    const response = await fetch(new_request);
-    const output = await response.json();
+    axios
+      .post(`${getapi}/post/`, {
+        title: title,
+        content: content,
+      })
+      .then((response) => {
+        setdata(response.data);
+      });
 
-    if (response.ok) {
-      console.log(output);
-    } else {
-      console.log("Failed");
-    }
-
-    console.log(title);
-    console.log(content);
     setcontent("");
     settitle("");
     setshow(false);
+
+    if (!data) return null;
 
     props.showall();
   };

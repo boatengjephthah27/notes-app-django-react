@@ -3,6 +3,6 @@
 @tailwind utilities;
 
 body {
-  @apply m-0 bg-gradient-to-r h-screen from-blue-900 to-cyan-900 box-border overflow-auto;
+  @apply m-0 bg-gradient-to-r h-screen  from-blue-900 to-cyan-900 box-border overflow-clip;
   font-family: "Montserrat", sans-serif;
 }

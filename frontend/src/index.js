@@ -1,10 +1,18 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+import cors from "cors";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+// const corsOrigin = {
+//   origin: "http://localhost:3000", //or whatever port your frontend is using
+//   credentials: true,
+//   optionSuccessStatus: 200,
+// };
+// App.use(cors(corsOrigin));
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <App />

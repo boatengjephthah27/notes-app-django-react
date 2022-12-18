@@ -1,13 +1,13 @@
 .notebg {
-  @apply mx-4 py-2 px-3 cursor-pointer hover:scale-[1.02] hover:shadow-md transition-all duration-300 text-blue-900;
+  @apply mx-4 py-2 px-3 hover:scale-[1.02] hover:shadow-md transition-all duration-300 text-blue-900;
 }
 
 .ntitle {
-  @apply text-lg font-bold cursor-pointer tracking-normal;
+  @apply text-lg font-bold tracking-normal cursor-pointer;
 }
 
 .date {
-  @apply text-sm font-thin;
+  @apply text-sm font-thin cursor-pointer;
 }
 
 .icon {
@@ -23,5 +23,5 @@
 }
 
 .editbtn {
-  @apply text-blue-700 cursor-pointer mr-8 ml-4;
+  @apply text-blue-700 cursor-pointer lg:mr-8 lg:ml-4 ml-3;
 }

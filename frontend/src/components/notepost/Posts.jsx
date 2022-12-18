@@ -1,8 +1,11 @@
 import React from "react";
 import Note from "../notes/Note";
 import "./post.css";
+// import { useNavigate } from "react-router-dom";
 
 const Posts = (props) => {
+  // const navigate = useNavigate();
+
   return (
     <div className='post'>
       {props.data_.length > 0 ? (
@@ -18,6 +21,7 @@ const Posts = (props) => {
                     ntitle={title}
                     ndate={date_created}
                     delitem={() => props.delitem(id)}
+                    note={note}
                   />
                 </div>
               );

@@ -11,7 +11,7 @@ from drf_yasg import openapi
 
 schema_view = get_schema_view(
    openapi.Info(
-      title="Kehilah Notes API",
+      title="SuaCode Notes API",
       default_version='v1',
       description="This is a Note API",
    ),

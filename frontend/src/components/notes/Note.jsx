@@ -6,18 +6,49 @@ import {
   faTrashCan,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useNavigate } from "react-router-dom";
 
 // import note from "./snote.png";
 
-const Note = ({ ntitle, ndate, delitem, edititem, nid }) => {
+const Note = ({ ntitle, ndate, delitem, nid, note }) => {
+  const navigate = useNavigate();
+
   return (
-    <div className='notebg' onClick={() => {}} key={nid}>
-      <h1 className='ntitle'>{ntitle}</h1>
-      <p className='date'>{ndate}</p>
+    <div className='notebg' key={nid}>
+      <h1
+        className='ntitle'
+        onClick={() =>
+          navigate(`/note/${nid}`, {
+            state: { note },
+          })
+        }
+      >
+        {ntitle}
+      </h1>
+      <p
+        className='date'
+        onClick={() =>
+          navigate(`/note/${nid}`, {
+            state: { note },
+          })
+        }
+      >
+        {ndate}
+      </p>
 
       <div>
-        <FontAwesomeIcon icon={faNoteSticky} className='icon' />
-        Notes
+        <FontAwesomeIcon icon={faNoteSticky} className='icon cursor-pointer' />
+
+        <span
+          onClick={() =>
+            navigate(`/note/${nid}`, {
+              state: { note },
+            })
+          }
+          className='icon cursor-pointer'
+        >
+          Notes
+        </span>
         <div className='del'>
           <FontAwesomeIcon
             icon={faTrashCan}
@@ -27,7 +58,9 @@ const Note = ({ ntitle, ndate, delitem, edititem, nid }) => {
           <FontAwesomeIcon
             icon={faPenToSquare}
             className='editbtn'
-            onClick={edititem}
+            onClick={() => {
+              navigate(`/note/${nid}`);
+            }}
           />
         </div>
       </div>

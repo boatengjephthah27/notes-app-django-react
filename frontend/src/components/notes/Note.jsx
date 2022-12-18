@@ -58,9 +58,11 @@ const Note = ({ ntitle, ndate, delitem, nid, note }) => {
           <FontAwesomeIcon
             icon={faPenToSquare}
             className='editbtn'
-            onClick={() => {
-              navigate(`/note/${nid}`);
-            }}
+            onClick={() =>
+              navigate(`/note/${nid}`, {
+                state: { note },
+              })
+            }
           />
         </div>
       </div>

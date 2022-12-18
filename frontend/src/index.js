@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import cors from "cors";
+// import cors from "cors";
 
 // const corsOrigin = {
 //   origin: "http://localhost:3000", //or whatever port your frontend is using

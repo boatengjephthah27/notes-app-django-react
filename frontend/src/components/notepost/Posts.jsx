@@ -14,7 +14,7 @@ const Posts = (props) => {
             {props.data_.map((note) => {
               const { title, date_created, id } = note;
               return (
-                <div className='nc'>
+                <div className='nc' key={id}>
                   <Note
                     key={id}
                     nid={id}

@@ -38,7 +38,10 @@ const NoteContent = (props) => {
 
   return (
     <div className='note-show-con ' key={note.id}>
-      <div className=' w-full h-[95%] mx-4 sm:mx-[10%] my-6 flex flex-col items-center bg-white py-6 rounded-2xl'>
+      <div
+        key={note.id}
+        className=' w-full h-[95%] mx-4 sm:mx-[10%] my-6 flex flex-col items-center bg-white py-6 rounded-2xl'
+      >
         <div className='w-full px-3 '>
           <Link to='/'>
             <FontAwesomeIcon
@@ -63,7 +66,7 @@ const NoteContent = (props) => {
           <textarea
             className='w-[90%] h-full py-3 outline-none resize-none'
             value={ncontent}
-            defaultValue={note.content}
+            // defaultValue={note.content}
             onChange={(e) => {
               setncontent(e.target.value);
               console.log(ncontent);

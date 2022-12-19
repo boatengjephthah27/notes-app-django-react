@@ -20,11 +20,12 @@ const NoteContent = (props) => {
     props.getAllPost();
 
     axios
-      .put(`${props.getapi}/post/${note.id}`, {
+      .put(`${props.getapi}/post/${note.id}/`, {
         title: ntitle,
         content: ncontent,
       })
       .then((response) => {
+        // console.log(response);
         setdata(response.data);
         // props.getAllPost();
         // alert(`Note Updated!`);
@@ -32,8 +33,8 @@ const NoteContent = (props) => {
 
     if (!data) return null;
 
-    props.getAllPost();
     navigate("/");
+    props.getAllPost();
   };
 
   return (
